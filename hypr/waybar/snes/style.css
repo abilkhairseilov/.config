@@ -1,0 +1,53 @@
+@define-color bg    #000000;
+@define-color bg1   #0D0D0D;
+@define-color fg    #EBEBEB;
+@define-color blue  #84c4cd;
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "ZedMono Nerd Font Mono", "JetBrainsMono Nerd Font Mono";
+  font-size: 13px;
+  font-weight: 800;
+}
+window#waybar {
+  background-color: @bg;
+  color: @fg;
+  border: 1px solid @fg;
+}
+#cpu,
+#memory,
+#pulseaudio,
+#custom-launcher,
+#workspaces button,
+#custom-updates,
+#battery,
+#clock,
+#custom-power,
+#tray {
+  background: @bg;
+  color: @fg;
+  margin: 4px 2px;
+  padding: 0 10px;
+}
+#cpu,
+#memory {
+  color: @blue;
+  background: @bg1;
+}
+#workspaces button.active {
+  color: @fg;
+  background: @bg1;
+}
+/* So that dynamic icons don't squash together */
+#workspaces button label {
+  font-size: 16px;
+  padding: 0 4px;
+}
+#workspaces button label {
+  font-size: 17px;
+  letter-spacing: 10px; /* keep it subtle */
+  padding: 0 6px;
+}
+#custom-launcher {
+  color: @blue;
+}
